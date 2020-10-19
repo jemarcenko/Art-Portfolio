@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@300&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script type="text/javascript" src = "{{ url_for('static', filename = 'js/main.js')}}"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Artify</title>
+    </head>
+
+    <body>
+ <!-- NAVIGATION STARTS HERE -->   
+    <header>
+        <div class="containernav">
+            <a href="#intro"><img src="logo small.png" alt="logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gallery">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ <!-- NAVIGATION ENDS HERE -->  
+
+<!-- INTRODUCTION STARTS HERE -->   
+    <section id="intro" class="intro">
+        <div class="container">
+            <h1 class="moto">May the art be with you </br>
+                <span>My art. Your Way.</span>
+            </h1>
+            <a href="#pathway" class="button">Make it happen</a>
+        </div>
+    </section>
+<!-- INTRODUCTION ENDS HERE -->  
+
+<!-- PATHWAY STARTS HERE -->  
+    <section id="pathway">
+        <div class="container">
+            <div class="explanation">
+                <h1>How it works</h1>
+            </div>
+            <div class="row">
+                <div class="step">
+                    <h1> Have an idea</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue urna dolor, nec egestas sem egestas quis. Curabitur gravida auctor accumsan. Duis gravida tincidunt est sit amet posuere. Sed at lorem eu tellus fringilla volutpat. Pellentesque maximus lorem placerat dolor tincidunt volutpat.</p>
+                </div>
+                <div class="step">
+                    <h1> Customise it</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue urna dolor, nec egestas sem egestas quis. Curabitur gravida auctor accumsan. Duis gravida tincidunt est sit amet posuere. Sed at lorem eu tellus fringilla volutpat. Pellentesque maximus lorem placerat dolor tincidunt volutpat.</p>
+                </div>
+                <div class="step">
+                    <h1>Receive it</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue urna dolor, nec egestas sem egestas quis. Curabitur gravida auctor accumsan. Duis gravida tincidunt est sit amet posuere. Sed at lorem eu tellus fringilla volutpat. Pellentesque maximus lorem placerat dolor tincidunt volutpat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- PATHWAY ENDS HERE --> 
+
+
+<!-- GALLERY STARTS HERE --> 
+    <section id="gallery" class="ending">
+        <div class="gallery">
+            <div class="portfolio">
+                <div class="portfolio-item medium one"><p class="desc">Ballpoint Pen. Chinese Architecture</p></div>
+                <div class="portfolio-item tall two"><p class="desc">Pen and Pencils. Photographic copy</p></div>
+                <div class="portfolio-item tall three"><p class="desc">Pencils. Photographic copy</p></div>
+                <div class="portfolio-item medium four"><p class="desc">Acrylic paints. Blue Jay</p></div>
+            </div>
+        </div>
+<!-- GALLERY ENDS HERE -->
+
+<!-- ABOUT ME STARTS HERE -->   
+<!-- ABOUT ME ENDS HERE -->     
+        <div class="contact">
+            <!-- ABOUT ME ENDS HERE -->    
+            <div class="about">
+               <h1>About me</h1>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui labore veniam dolore quibusdam sapiente! Amet, saepe, dolores, quia quos soluta ipsum magni reprehenderit beatae atque excepturi tempora vero! Omnis voluptas provident, sint harum magnam dolor deserunt, dolore nihil debitis tempore, voluptates inventore repudiandae iusto. Adipisci repellat, maxime ratione vero quam esse rem, reprehenderit commodi in aut nisi, architecto impedit iure.
+               </p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus magnam id soluta delectus minima aliquam dolorum eligendi qui vitae error quae, a dolorem sint harum libero excepturi molestiae eius labore!</p>
+            </div>
+            <br>
+            <h1>Request a quote</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ex, dolorem voluptas dicta, quaerat alias architecto praesentium mollitia esse atque officiis unde repudiandae at nobis? Quis quidem voluptas veniam commodi!</p>
+            <br>
+            <!-- FORM STARTS HERE --> 
+            <form action="/submit" method="POST" enctype="multipart/form-data" class="form">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="technique">Technique</label>
+                        <select id="technique" name="technique">
+                            <option value="">Select</option>
+                            <option value="pencil">Pencils</option>
+                            <option value="pen">Ballpoint Pen</option>
+                            <option value="acrylic">Acrylic Paints</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="size">Size</label>
+                        <select id="size" name="size">
+                            <option value="">Select</option>
+                            <option value="a3">A3</option>
+                            <option value="a4">A4</option>
+                            <option value="a5">A5</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="image" class="not">Reference picture</label>
+                        <input class="not" type="file" id="file" name="image">
+                    </div>
+                </div>
+                <label for="notes">Additional Notes</label>
+                <textarea name="notes" id="notes" rows="6" placeholder="Please include any additional notes here"></textarea>
+                <button type="submit" onclick="myFunction()">Send</button>
+            </form>
+        </div>
+    </section>
+<!-- FORM ENDS HERE --> 
+<!-- GALLERY ENDS HERE --> 
+    <footer>
+            <br>
+            <h1>Thank you</h1>
+            <p>Footer is still being worked on</p>
+            <p>Sorry, I'm just tired (｡•́︿•̀｡)</p>
+    </footer>
+    </body>
+</html>
